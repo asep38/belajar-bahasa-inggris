@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belajar Bahasa Inggris</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="css/components/menu.css" />
 </head>
-<body>
-    <h1>Hallo world!</h1>
+<body class="bg-yellow-50 min-h-screen flex flex-col items-center">
+    <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">📚 Fun English Menu</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <a href="pages/vocab/animals" class="block bg-green-200 hover:bg-green-300 p-6 rounded-xl shadow-md transition text-center">
+        <div class="text-5xl mb-2">🐶</div>
+        <div class="text-xl font-semibold text-green-900">Learn Animals</div>
+      </a>
+    
+      <a href="#fruits" class="block bg-yellow-200 hover:bg-yellow-300 p-6 rounded-xl shadow-md transition text-center">
+        <div class="text-5xl mb-2">🍎</div>
+        <div class="text-xl font-semibold text-yellow-900">Learn Fruits</div>
+      </a>
+    </div>
+    
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

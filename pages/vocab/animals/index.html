@@ -1,0 +1,38 @@
+<!-- pages/vocab/animals/animals.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Animals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 flex flex-col items-center justify-center min-h-screen">
+
+
+    <div id="default-carousel" class="relative w-full max-w-md" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div id="carousel-wrapper" class="relative h-56 overflow-hidden rounded-lg md:h-72">
+          <!-- Item slides akan dimasukkan lewat JS -->
+        </div>
+    
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-prev>
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white/80">
+            <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+          </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-next>
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white/80">
+            <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
