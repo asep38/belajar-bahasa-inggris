@@ -1,5 +1,5 @@
 // pages/vocab/animals/script.js
-import { getAnimalData } from '../../../../js/api.js';
+import { getAnimalData } from 'https://github.com/asep38/belajar-bahasa-inggris/blob/main/js/api.js';
 
 const carouselWrapper = document.getElementById('carousel-wrapper');
 let currentIndex = 0;
