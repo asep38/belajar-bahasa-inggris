@@ -1,5 +1,29 @@
-// pages/vocab/animals/script.js
-import { getAnimalData } from 'https://github.com/asep38/belajar-bahasa-inggris/blob/main/js/api.js';
+// API
+
+const API_BASE_URL = 'https://asep38.github.io/api-inggris-indonesia/data/vocab';
+
+export async function getAnimalData() {
+  try {
+    const response = await fetch(`${API_BASE_URL}/animals.json`);
+
+    if (!response.ok) {
+      throw new Error(`Gagal fetch data: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+    return data.map(item => ({
+      icon: item.icon,
+      word: item.word,
+      translation: item.translation
+    }));
+  } catch (error) {
+    console.error('Error mengambil data hewan:', error);
+    return [];
+  }
+}
+
+// =====================================================
 
 const carouselWrapper = document.getElementById('carousel-wrapper');
 let currentIndex = 0;
