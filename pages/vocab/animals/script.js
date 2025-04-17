@@ -12,13 +12,16 @@ function showSlide(index) {
   });
 }
 
-function createCarouselItem({ word, translation }, index) {
+function createCarouselItem({ icon, word, translation }, index) {
   const div = document.createElement('div');
   div.className = `absolute inset-0 transition-opacity duration-700 ease-in-out ${index === 0 ? 'block' : 'hidden'}`;
   div.setAttribute('data-carousel-item', '');
 
   div.innerHTML = `
     <div class="flex flex-col items-center justify-center h-full bg-white rounded-lg shadow-md p-4 text-center">
+      <div class="mb-2">
+        <img src="${icon}" alt="${word}" class="w-20 object-contain" />
+      </div>
       <div class="text-2xl font-bold text-blue-700 mb-2">${word}</div>
       <div class="text-lg text-gray-600">${translation}</div>
     </div>
